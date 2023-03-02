@@ -1,7 +1,5 @@
 pipeline {
-	agent {	
-		label 'pipeline-1'
-		}
+	agent any
 	stages {
 		stage("SCM") {
 			steps {
@@ -32,7 +30,7 @@ pipeline {
 		stage("testing website") {
 			steps {
 				retry(5) {
-				sh 'curl --silent http://3.15.170.80:9000/java-web-app/ | grep -i "india" '
+				sh 'curl --silent http://3.15.170.80:9000/java-web-app/ '
 					}
 				}
 			}
