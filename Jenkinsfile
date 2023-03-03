@@ -27,7 +27,7 @@ pipeline {
    				 // some block
 					
 			
-				sh 'sudo docker login -u kuldeepbhardwaj -p ${docker_hub_password_var}'
+				sh 'sudo docker login -u kuldeepbhardwaj -p ${docker_hub_passwd_var}'
 				sh 'sudo docker push kuldeepbhardwaj/pipeline-java:$BUILD_TAG'
 				}
 			}	
