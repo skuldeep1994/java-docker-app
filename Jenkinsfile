@@ -42,7 +42,7 @@ pipeline {
 		stage("testing website") {
 			steps {
 				retry(5) {
-				sh 'curl --silent http://3.131.100.189:8001/java-web-app/'
+				sh 'curl --silent http://3.133.90.190:8001/java-web-app/'
 					}
 				}
 			}
